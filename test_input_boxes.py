@@ -59,11 +59,7 @@ def test_all_input_boxes():
                 box = locator.bounding_box()
                 assert is_within_tolerance(box['width'], TARGET_WIDTH, TOLERANCE), f"Width out of range: {box['width']}px"
                 assert is_within_tolerance(box['height'], TARGET_HEIGHT, TOLERANCE), f"Height out of range: {box['height']}px"
-                if counter<=10:
-                    time.sleep(5)
-                    counter+=1
-                else:
-                    break
+                print(***************************************************"done"**********************************)
             except PlaywrightTimeoutError:
                 print(f"⚠️ Timeout occurred while processing link {i}, skipping to next link.")
                 continue  # Skip to the next link if a timeout occurs
