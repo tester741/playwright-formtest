@@ -9,9 +9,12 @@ SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/T05CW9S8WD9/B07KX5BUYF6/2h
 def send_slack_message(message):
     payload = {"text": message}
     try:
-        requests.post(SLACK_WEBHOOK_URL, json=payload)
+        resp = requests.post(SLACK_WEBHOOK_URL, json=payload)
+        print(f"Slack response status: {resp.status_code}")
+        print(f"Slack response text: {resp.text}")
     except Exception as e:
         print(f"Error sending message to Slack: {e}")
+
 
 # Constants
 TARGET_WIDTH = 219.4
