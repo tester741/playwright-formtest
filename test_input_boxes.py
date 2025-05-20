@@ -237,5 +237,8 @@ def test_home_page():
             print(msg)
             send_slack_message(msg)
 
-
+def test_slack():
+     msg = f"last test"
+     print(msg)
+     send_slack_message(msg)    
 
