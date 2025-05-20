@@ -1,3 +1,3 @@
 playwright
 pytest
-requests
+requests>=2.30
