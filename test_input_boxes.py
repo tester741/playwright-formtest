@@ -4,7 +4,7 @@ import requests  # <--- Add this import
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 # Slack webhook setup
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"  # <-- Change this!
+SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"  # <-- Change this!
 
 
 def send_slack_message(message):
