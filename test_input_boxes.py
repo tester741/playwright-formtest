@@ -23,7 +23,10 @@ HOME_TOLERANCE = 0.5
 def is_within_tolerance(actual, expected, tolerance):
     return abs(actual - expected) <= tolerance
 
-
+def test_slack():
+     msg = f"last test"
+     print(msg)
+     send_slack_message(msg)    
 
 def test_all_input_boxes_tagmo3():
     with sync_playwright() as p:
@@ -237,8 +240,5 @@ def test_home_page():
             print(msg)
             send_slack_message(msg)
 
-def test_slack():
-     msg = f"last test"
-     print(msg)
-     send_slack_message(msg)    
+
 
